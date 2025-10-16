@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Linkedin, Github, Menu, X, ExternalLink, ChevronRight, ArrowUpRight, Circle, CheckCircle2, Briefcase, Calendar, TrendingUp, Users, Code2, Rocket, Award, Zap, Target, Star, MessageSquare, Clock, Shield, Layers, BarChart3, Globe, Sparkles, Download, ArrowRight, CheckCircle } from 'lucide-react';
+import { Mail, Phone, Linkedin, Menu, X, ExternalLink, ChevronRight, ArrowUpRight, Circle, CheckCircle2, Briefcase, Calendar, TrendingUp, Users, Code2, Rocket, Award, Zap, Target, Star, MessageSquare, Clock, Shield, Layers, BarChart3, Globe, Sparkles, Download, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState('frontend');
 
   useEffect(() => {
@@ -134,7 +133,7 @@ export default function Portfolio() {
       name: "Michael Chen",
       role: "Founder, StartupXYZ",
       company: "StartupXYZ",
-      content: "Working with Opeyemi was a game-changer for our startup. He didn't just code what we asked for - he provided valuable insights that improved our product significantly. His technical expertise is outstanding.",
+      content: "Working with Opeyemi was a game-changer for our startup. He didn&apos;t just code what we asked for - he provided valuable insights that improved our product significantly. His technical expertise is outstanding.",
       rating: 5,
       image: "MC"
     },
@@ -142,7 +141,7 @@ export default function Portfolio() {
       name: "Emily Rodriguez",
       role: "CTO, DesignHub",
       company: "DesignHub",
-      content: "Opeyemi's work on our company website exceeded expectations. The performance optimizations he implemented resulted in a 60% faster load time. He's highly skilled and a pleasure to work with.",
+      content: "Opeyemi&apos;s work on our company website exceeded expectations. The performance optimizations he implemented resulted in a 60% faster load time. He&apos;s highly skilled and a pleasure to work with.",
       rating: 5,
       image: "ER"
     }
@@ -251,7 +250,7 @@ export default function Portfolio() {
     },
     {
       question: "Do you work with clients internationally?",
-      answer: "Absolutely! I work with clients globally across different time zones. I'm flexible with meeting times and maintain excellent communication through Slack, email, and video calls."
+      answer: "Absolutely! I work with clients globally across different time zones. I&apos;m flexible with meeting times and maintain excellent communication through Slack, email, and video calls."
     },
     {
       question: "What technologies do you specialize in?",
@@ -263,7 +262,7 @@ export default function Portfolio() {
     },
     {
       question: "How do you handle project communication?",
-      answer: "I maintain transparent communication through regular updates, weekly progress reports, and am always available via email, Slack, or WhatsApp. You'll never be left wondering about your project status."
+      answer: "I maintain transparent communication through regular updates, weekly progress reports, and am always available via email, Slack, or WhatsApp. You&apos;ll never be left wondering about your project status."
     }
   ];
 
@@ -420,10 +419,10 @@ export default function Portfolio() {
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h3 className="text-2xl font-bold mb-4">My Journey</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  With over 4 years of professional experience, I specialize in building high-performance web and mobile applications that make a real difference. Currently at Netan Technology, I've had the privilege of working on everything from e-commerce platforms processing hundreds of thousands in transactions to government projects with strict security requirements.
+                  With over 4 years of professional experience, I specialize in building high-performance web and mobile applications that make a real difference. Currently at Netan Technology, I&apos;ve had the privilege of working on everything from e-commerce platforms processing hundreds of thousands in transactions to government projects with strict security requirements.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  I'm driven by a passion for clean code, performance optimization, and continuous learning. Whether it's implementing CI/CD pipelines, architecting scalable backends, or crafting pixel-perfect interfaces, I bring dedication and expertise to every project. I believe in building not just functional software, but exceptional user experiences that drive business results.
+                  I&apos;m driven by a passion for clean code, performance optimization, and continuous learning. Whether it&apos;s implementing CI/CD pipelines, architecting scalable backends, or crafting pixel-perfect interfaces, I bring dedication and expertise to every project. I believe in building not just functional software, but exceptional user experiences that drive business results.
                 </p>
               </div>
 
@@ -606,8 +605,6 @@ export default function Portfolio() {
             {projects.map((project, idx) => (
               <div
                 key={idx}
-                onMouseEnter={() => setHoveredProject(idx)}
-                onMouseLeave={() => setHoveredProject(null)}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-gray-100 hover:border-blue-600 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="grid lg:grid-cols-5 gap-8 p-8">
@@ -692,7 +689,7 @@ export default function Portfolio() {
 
           <div className="mt-12 text-center bg-white p-8 rounded-2xl border border-gray-100">
             <h3 className="text-2xl font-bold mb-4">Want to see more?</h3>
-            <p className="text-gray-600 mb-6">I've worked on 50+ projects across various industries and technologies</p>
+            <p className="text-gray-600 mb-6">I&apos;ve worked on 50+ projects across various industries and technologies</p>
             <button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all font-medium inline-flex items-center space-x-2"
@@ -780,7 +777,7 @@ export default function Portfolio() {
                     <Star key={i} className="text-yellow-400 fill-yellow-400" size={18} />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 mb-6 leading-relaxed italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.image}
@@ -868,7 +865,7 @@ export default function Portfolio() {
 
           <div className="mt-12 text-center bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-2xl text-white">
             <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-            <p className="mb-6 text-blue-100">I'm happy to discuss your specific needs and answer any questions you may have</p>
+            <p className="mb-6 text-blue-100">I&apos;m happy to discuss your specific needs and answer any questions you may have</p>
             <button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-all font-medium inline-flex items-center space-x-2"
@@ -883,9 +880,9 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let's Build Something Great Together</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let&apos;s Build Something Great Together</h2>
           <p className="text-xl text-blue-100 mb-12">
-            I'm always interested in hearing about new projects and opportunities. Whether you need a complete web application, want to optimize an existing project, or just want to chat about tech, I'd love to hear from you!
+            I&apos;m always interested in hearing about new projects and opportunities. Whether you need a complete web application, want to optimize an existing project, or just want to chat about tech, I&apos;d love to hear from you!
           </p>
           
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
@@ -938,7 +935,7 @@ export default function Portfolio() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold mb-4">Open to Opportunities</h3>
             <p className="text-blue-100 mb-6">
-              Currently accepting freelance projects and full-time positions. I'm particularly interested in challenging roles where I can contribute to innovative products and work with talented teams.
+              Currently accepting freelance projects and full-time positions. I&apos;m particularly interested in challenging roles where I can contribute to innovative products and work with talented teams.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
