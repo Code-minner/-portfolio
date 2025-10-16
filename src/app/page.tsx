@@ -945,10 +945,14 @@ export default function Portfolio() {
                 <span>Start a Conversation</span>
                 <ArrowUpRight size={18} />
               </a>
-              <button className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all font-medium border border-white/20">
+              <a
+                href="/Opeyemi-Boluwatife-CV.pdf"
+                download="Opeyemi-Boluwatife-CV.pdf"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all font-medium border border-white/20"
+              >
                 <Download size={18} />
                 <span>Download CV</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
